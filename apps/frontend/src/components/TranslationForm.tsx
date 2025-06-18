@@ -69,15 +69,16 @@ const TranslationForm: React.FC<TranslationFormProps> = ({ onSubmit, loading, in
         )}
       </div>
       
-      <div className="bg-blue-50 border border-blue-200 rounded-md p-4">
-        <h3 className="text-sm font-semibold text-blue-900 mb-2">How to use:</h3>
-        <ol className="text-sm text-blue-800 space-y-1 list-decimal list-inside">
-          <li>Go to a Naver Webtoon chapter page</li>
-          <li>Copy the URL from your browser</li>
-          <li>Paste it in the field above</li>
-          <li>Click "Convert" and wait for the translation</li>
-        </ol>
-      </div>
+              <div className="bg-blue-50 border border-blue-200 rounded-md p-4">
+          <h3 className="text-sm font-semibold text-blue-900 mb-2">📚 Return of the Mount Hua Sect Translator</h3>
+          <ol className="text-sm text-blue-800 space-y-1 list-decimal list-inside">
+            <li>Go to a Naver Webtoon chapter page</li>
+            <li>Copy the URL from your browser</li>
+            <li>Paste it in the field above</li>
+            <li>Click "Convert" and wait for AI translation (processes up to 30 panels)</li>
+          </ol>
+          <p className="text-xs text-blue-700 mt-2">✨ Optimized for martial arts manhwa with context-aware translations</p>
+        </div>
     </form>
   );
 };
