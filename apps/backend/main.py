@@ -310,8 +310,8 @@ def add_english_text(image_bytes: bytes, translations: List[Dict]) -> bytes:
             if not english_text:
                 continue
             
-            # Calculate font size based on bounding box height
-            font_size = max(12, min(40, int(bbox['height'] * 0.7)))
+            # Calculate font size based on bounding box height with better scaling
+            font_size = max(14, min(48, int(bbox['height'] * 0.8)))
             
             try:
                 # Try to use a nice font, fall back to default
