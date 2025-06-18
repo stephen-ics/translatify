@@ -171,15 +171,33 @@ async def translate_text_with_openai(korean_text: str) -> str:
             return korean_text
         
         response = await openai_client.chat.completions.create(
-            model="gpt-4.1",
+            model="gpt-4o",
             messages=[
                 {
                     "role": "system",
-                    "content": "You are a professional Korean to English translator specializing in manhwa/webtoon content. Translate the given Korean text to natural English while preserving the tone, emotion, and character voice. For sound effects (onomatopoeia), translate to appropriate English equivalents. Keep translations concise to fit in speech bubbles."
+                    "content": """You are a professional translator specializing in the manhwa "Return of the Mount Hua Sect" (화산귀환). Do NOT use Google Translate or word-for-word replacement.
+
+SERIES CONTEXT:
+- Title: Return of the Mount Hua Sect
+- Genre: Martial arts fantasy with wuxia elements
+- Setting: Classic "orthodox vs. unorthodox sects" martial arts world
+- Plot: Chung Myung, The 13th Disciple of the Mount Hua Sect, one of the 3 Great Swordsmen—Plum Blossom Sword Saint—defeated Chun Ma, who brought destruction and disarray onto the world. After the battle, he dies atop the headquarters of the Heavenly Demon Sect. He is reborn 100 years later in the body of a child to find the Mount Hua Sect has fallen.
+
+TRANSLATION GUIDELINES:
+1. Preserve martial arts terminology and wuxia/manhwa conventions
+2. Use idiomatic English familiar to martial arts story fans
+3. Maintain character voice, tone, and emotional nuance
+4. For martial arts organizations/sects/titles, use genre-appropriate terms
+5. Prioritize meaning and cultural context over literal translation
+6. Keep translations concise for speech bubbles
+7. For sound effects, use appropriate English onomatopoeia
+8. Consider character relationships and story context
+
+Translate with the depth and nuance of someone who understands both Korean culture and martial arts fiction."""
                 },
                 {
                     "role": "user",
-                    "content": f"Translate this Korean text to English: {korean_text}"
+                    "content": f"Translate this Korean text from Return of the Mount Hua Sect: {korean_text}"
                 }
             ],
             max_tokens=3000,
