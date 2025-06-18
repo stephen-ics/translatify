@@ -233,7 +233,7 @@ def detect_and_extract_text(image_bytes: bytes) -> List[Dict]:
         text_regions = []
         for (bbox, text, confidence) in results:
             # Only process if confidence is reasonable and text contains Korean characters
-            if confidence > 0.3 and any('\u3130' <= char <= '\u318F' or '\uAC00' <= char <= '\uD7A3' for char in text):
+            if confidence > 0.4 and any('\u3130' <= char <= '\u318F' or '\uAC00' <= char <= '\uD7A3' for char in text):
                 # Convert bbox to simple rectangle coordinates
                 x_coords = [point[0] for point in bbox]
                 y_coords = [point[1] for point in bbox]
