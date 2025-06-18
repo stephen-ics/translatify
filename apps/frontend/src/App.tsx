@@ -163,10 +163,10 @@ function App() {
             </h2>
             <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-md">
               <p className="text-sm text-green-800">
-                ✅ Successfully processed {translatedImages.length} images with Korean text detection, AI translation, and English text rendering.
-                {totalImages > 10 && (
+                ✅ Successfully processed {translatedImages.length} panels from Return of the Mount Hua Sect with context-aware AI translation!
+                {totalImages > 30 && (
                   <span className="block mt-1 text-green-700">
-                    Note: Limited to first 10 images for testing. Full chapter had {totalImages} images.
+                    Note: Limited to first 30 images for processing. Full chapter had {totalImages} images.
                   </span>
                 )}
               </p>
