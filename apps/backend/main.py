@@ -211,7 +211,8 @@ Translate with the depth and nuance of someone who understands both Korean cultu
         
     except Exception as e:
         print(f"Translation error for '{korean_text}': {e}")
-        return korean_text
+        # Return original text with a note if translation fails
+        return f"[Translation failed: {korean_text}]"
 
 def detect_and_extract_text(image_bytes: bytes) -> List[Dict]:
     """Detect Korean text in image and return text regions with coordinates."""
