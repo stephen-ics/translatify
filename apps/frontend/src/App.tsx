@@ -149,7 +149,7 @@ function App() {
             </p>
             {totalImages > 0 && (
               <p className="mt-2 text-sm font-medium text-blue-600">
-                Processing {Math.min(10, totalImages)} images (limited for testing)
+                Processing {Math.min(30, totalImages)} images with martial arts context
               </p>
             )}
           </div>
