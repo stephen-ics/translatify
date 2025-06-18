@@ -119,7 +119,7 @@ function App() {
               </div>
               {totalImages > 0 && (
                 <div className="text-center text-xs text-gray-500">
-                  Processing up to 10 images from this chapter (limited for testing)
+                  Processing up to 30 images from this chapter
                 </div>
               )}
               {currentImage > 0 && totalImages > 0 && (
