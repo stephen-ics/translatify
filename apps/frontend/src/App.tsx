@@ -48,7 +48,7 @@ function App() {
           `${API_BASE_URL}/api/translate-manhwa`,
           { url: webtoonUrl },
           {
-            timeout: 600000, // 10 minute timeout for OCR processing
+            timeout: 900000, // 15 minute timeout for OCR processing
             onDownloadProgress: (progressEvent) => {
               if (progressEvent.loaded && progressEvent.total) {
                 const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
